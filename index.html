@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.1/css/all.css">
+
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Billing System</title>
+</head>
+
+<body>
+    <div class="mainNav">
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#" id="HOME"><i class="fas fa-home"></i> HOME</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#" id="PRICING"><i class="fas fa-rupee-sign"></i> Pricing <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="nightM"><i class="fas fa-lightbulb"></i> Night Mode</a>
+                    </li>
+
+
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="title">
+            <h1><i class="fas fa-utensils"></i> Cafe Billing System <i class="fas fa-utensils"></i></h1>
+        </div>
+    </div>
+
+    <!-- Page-1 -->
+    <div id="page1">
+        <!-- box-1 -->
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container item b1">
+                    <form action="">
+                        <form action="" id="cDetails">
+                            <label for="biino">Bill Number:</label>
+                            <input type="number" name="billno" id="billno" min="0" value="10001" >
+                            <br><br>
+
+                        </form>
+                        <form action="" id="items">
+                            <label for="ff">French Fries: <i class="fab fa-stack-overflow"></i></label>
+                            <input type="number" name="french_fries" id="ff" min="0" value="" class="menu">
+                            <br><br>
+
+                            <label for="brg">Burger: <i class="fas fa-hamburger"></i></label>
+                            <input type="number" name="burger" id="brg" min="0" value="" class="menu">
+                            <br><br>
+
+                            <label for="pz"> Pizza: <i class="fas fa-pizza-slice"></i></label>
+                            <input type="number" name="pizza" id="pz" min="0" value="" class="menu">
+                            <br><br>
+
+                            <label for="sd">Soft Drinks: <i class="fas fa-cocktail"></i></label>
+                            <input type="number" name="soft_drinks" id="sd" min="0" value="" class="menu">
+                            <br><br>
+
+                        </form>
+                    </form>
+                </div>
+
+
+            </div>
+
+            <!-- box-2 -->
+            <div class="col-sm-4">
+                <div class="container item b2">
+                    <form action="">
+                        <form action="" id="priceDisplay">
+
+                            <label for="discount">Special Discount(%): </label>
+                            <input type="number" name="discount" id="discount" min="0" value="0">
+                            <br><br>
+
+                            <label for="price">Price(&#8377;):</label>
+                            <input type="number" name="price" id="price" min="0" readonly>
+                            <br><br>
+
+
+
+                            <label for="vat">VAT(%): </label>
+                            <input type="number" name="vat" id="vat" min="0" value="11">
+                            <br><br>
+
+                            <label for="Tprice">Total Price(&#8377;): </label>
+                            <input type="number" name="total_price" id="Tprice" min="0" readonly>
+                            <br><br>
+
+                            <button type="button" class="btn-primary" id="calculateb">Calculate</button>
+                            <button type="button" class="btn-danger" id="resetb">Reset</button>
+                            <br>
+
+
+
+                        </form>
+                        <div id="warning1">
+
+                        </div>
+
+
+
+
+
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- box-3 -->
+            <div class="col-sm-4">
+                <div class="item b3" id="paymentBox">
+                    <div id="payment">
+                        <h2>Payment Method</h2>
+                        <button class="btn-success" id="onlineB">Online</button>
+                        <button class="btn-warning" id="cashB">Cash</button>
+                    </div>
+
+                    <div id="online">
+                        <img src="images/paytm.webp" alt="Paytm" class="img-fluid">
+                        <br><br>
+
+                    </div>
+
+                    <div id="offline">
+                        <form action="">
+                            <label for="cashRecived">Cash Recived(&#8377;): </label>
+                            <input type="number" id="cashRecived" min="0"><br><br>
+
+                            <label for="cashReturned">Cash to be Returned(&#8377;): </label>
+                            <input type="number" id="cashReturned" readonly><br><br>
+
+                            <br><br>
+
+                        </form>
+                    </div>
+
+                    <button class="btn-success payB">Pay Bill</button>
+                    <button class="btn-danger closeB">Cancel</button>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- End Of Page-1 -->
+
+    <!-- Page-2 -->
+    <div id="page2">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="container item b1">
+                    <form action="">
+                        <form action="">
+                            <input type="text" id="price_ps" value="Price Per Serving" readonly>
+                            <br><br>
+                        </form>
+                        <form action="" id="pricing">
+                            <label for="ffp">French Fries: </label>
+                            <input type="number" name="ffp" id="ffp" min="0" value="99" class="rates">
+                            <br><br>
+
+                            <label for="brgp">Burger: </label>
+                            <input type="number" name="brgp" id="brgp" min="0" value="199" class="rates">
+                            <br><br>
+
+                            <label for="pzp">Pizza: </label>
+                            <input type="number" name="pzp" id="pzp" min="0" value="399" class="rates">
+                            <br><br>
+
+                            <label for="sdp">Soft Drinks: </label>
+                            <input type="number" name="sdp" id="sdp" min="0" value="30" class="rates">
+                            <br><br>
+
+                        </form>
+                    </form>
+
+
+                </div>
+
+
+            </div>
+
+            <!-- box-2 -->
+            <div class="col-sm-4">
+                <div class="container item b1">
+                    <form action="">
+                        <form action="">
+                            <input type="text" id="price_ps" value="Stock" readonly>
+                            <br><br>
+                        </form>
+                        <form action="" id="stock">
+                            <label for="ffs">French Fries: </label>
+                            <input type="number" name="ffs" id="ffs" min="0" value="50" class="stocks">
+                            <br><br>
+
+                            <label for="brgs">Burger: </label>
+                            <input type="number" name="brgs" id="brgs" min="0" value="50" class="stocks">
+                            <br><br>
+
+                            <label for="pzs">Pizza: </label>
+                            <input type="number" name="pzs" id="pzs" min="0" value="30" class="stocks">
+                            <br><br>
+
+                            <label for="sds">Soft Drinks: </label>
+                            <input type="number" name="sds" id="sds" min="0" value="70" class="stocks">
+                            <br><br>
+
+                        </form>
+                    </form>
+
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    </div>
+
+    </div>
+    <!-- End of Page-2 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
